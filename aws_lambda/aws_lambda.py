@@ -189,7 +189,7 @@ def build(src, local_package=None):
                 continue
             files.append(os.path.join(src, filename))
         elif os.path.isdir(filename) and filename in cfg.get('include_dirs', []):
-            if filename == 'dist':
+            if filename == dist_directory:
                 continue
             dirs.append(os.path.join(src, filename))
 
